@@ -15,12 +15,24 @@ except FileNotFoundError:
 
 # 特征范围定义
 feature_names = [
-    "diabetes", "BMXBMI", "RIDRETH1"
+    "diabetes", "BMXBMI", "RIDRETH1", "Age", "DMDEDUC2", "DMDMARTL", "PIR", "smoke", "hypertention",  "METS.VF", "CONUT", "LBXTC","LBDHDD","AGR","VAI"
 ]
 feature_ranges = {
     "BMXBMI": {"type": "numerical", "min": 25, "max": 100, "default": 25},
     "diabetes": {"type": "categorical", "options": ["0", "1"]},
     "RIDRETH1": {"type": "categorical", "options": ["1", "2", "3", "4", "5"]},
+    "Age": {"type": "categorical", "options": ["0", "1"]},
+    "DMDEDUC2": {"type": "categorical", "options": ["1", "2", "3", "4", "5"]},
+    "DMDMARTL": {"type": "categorical", "options": ["1", "2", "3", "4", "5", "6"]},
+    "PIR": {"type": "categorical", "options": ["0", "1", "2"]},
+    "smoke": {"type": "categorical", "options": ["0", "1", "2"]},
+    "hypertention": {"type": "categorical", "options": ["0", "1"]},
+    "METS.VF": {"type": "numerical", "min": 0, "max": 50, "default": 0},
+    "CONUT": {"type": "numerical", "min": 0, "max": 50, "default": 0},
+    "LBXTC": {"type": "numerical", "min": 0, "max": 1000, "default": 0},
+    "LBDHDD": {"type": "numerical", "min": 0, "max": 1000, "default": 0},
+    "AGR": {"type": "numerical", "min": 0, "max": 10, "default": 0},
+    "VAI": {"type": "numerical", "min": 0, "max": 10, "default": 0}
 }
 
 # Streamlit 界面
